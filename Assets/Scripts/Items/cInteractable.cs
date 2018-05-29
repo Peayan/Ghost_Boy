@@ -7,7 +7,7 @@ public class cInteractable : MonoBehaviour {
 
 	public enum Interact_Type {NPC, ITEM, PUZZLE};
 	[SerializeField]
-	Interact_Type m_itemType;
+	protected Interact_Type m_itemType;
 
 	public string m_Name;
 

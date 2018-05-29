@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-static public class cMain {
+static public class Main {
 
-    public static cPlayerController mPlayerController;
+	public static cDialogueManager DialogueManager;
+    public static cPlayerController PlayerController;
 
 	
 }

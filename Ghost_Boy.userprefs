@@ -1,8 +1,9 @@
-﻿<Properties StartupItem="Ghost_Boy.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\cInteractable.cs">
     <Files>
-      <File FileName="Assets\Scripts\Items\cInteractable.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\Items\cInteractable.cs" Line="12" Column="23" />
+      <File FileName="Assets\Scripts\Player\cInventory.cs" Line="22" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

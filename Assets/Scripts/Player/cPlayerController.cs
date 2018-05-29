@@ -12,16 +12,19 @@ public class cPlayerController : MonoBehaviour {
     float m_fVerticalMovement;
     bool m_bPlayingMoving;
 
+	cDialogueText mPlayerDialogue;
+
     Vector2 m_PlayerDirection;
 
 	// Use this for initialization
 	void Awake ()
     {
-        cMain.mPlayerController = this;
+        Main.PlayerController = this;
 	}
 
     private void Start()
     {
+		mPlayerDialogue = GetComponent<cDialogueText> ();
         m_rbPlayer = GetComponent<Rigidbody2D>();
         m_Anim = GetComponent<Animator>();        
     }
@@ -49,6 +52,12 @@ public class cPlayerController : MonoBehaviour {
             m_rbPlayer.velocity = new Vector2(m_rbPlayer.velocity.x, m_fVerticalMovement * m_fPlayerSpeed * Time.deltaTime);
             m_PlayerDirection = new Vector2(0, m_fVerticalMovement);
         }
+
+		if (Input.GetKeyDown (KeyCode.Space))
+			mPlayerDialogue.TriggerDialogue ();
+
+		if (Input.GetKeyDown (KeyCode.R))
+			Main.DialogueManager.ShowNextSentence ();
         
         m_Anim.SetFloat("LastDirectionX", m_PlayerDirection.x);
         m_Anim.SetFloat("LastDirectionY", m_PlayerDirection.y);
@@ -56,7 +65,7 @@ public class cPlayerController : MonoBehaviour {
         m_Anim.SetFloat("HorizontalMovement", m_fHorizontalMovement);
         m_Anim.SetFloat("VerticalMovement", m_fVerticalMovement);
 
-        //if (Input.anyKeyDown) {   }
-        //else m_Anim.SetBool("PlayerIdle", true);
+       // if (Input.anyKeyDown) {   }
+        //	else m_Anim.SetBool("PlayerIdle", true);
     }
 }

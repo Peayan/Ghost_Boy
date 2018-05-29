@@ -11,7 +11,7 @@ public class cCameraPlayerFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        offset = cMain.mPlayerController.transform.position;
+        offset = Main.PlayerController.transform.position;
         offset.z = m_OffsetZ;
 
         transform.position = Vector3.Lerp(transform.position, offset, m_CameraDelay);
