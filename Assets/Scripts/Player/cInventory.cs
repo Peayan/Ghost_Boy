@@ -19,7 +19,7 @@ public class cInventory : MonoBehaviour {
         for (int i = 0; i < m_Inventory.Count; i++)
         {
             m_Inventory.Add(m_EmptySlot);
-            m_InventoryIcons.Add(m_EmptySlot.m_Sprite);
+           // m_InventoryIcons.Add(m_EmptySlot.m_Sprite);
         }        
     }
 

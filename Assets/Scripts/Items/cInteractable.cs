@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class cInteractable : MonoBehaviour {
 
-    public Image m_Sprite;
+	public enum Interact_Type {NPC, ITEM, PUZZLE};
+	[SerializeField]
+	Interact_Type m_itemType;
+
+	public string m_Name;
 
 
 }
